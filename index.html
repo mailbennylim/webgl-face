@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
     <style>
-        body { margin: 0; background-color: #666666; }
+        body { margin: 0; }
     </style>
 </head>
 <body>
@@ -35,14 +35,14 @@
 
             // Create scene
             scene = new THREE.Scene();
-            scene.background = new THREE.Color(0x666666);
+            // Removed background color setting to keep it transparent
 
             // Camera
             camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 20);
             camera.position.set(-1.8, 0.8, 3);
 
             // Renderer
-            renderer = new THREE.WebGLRenderer({ antialias: true });
+            renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true }); // alpha: true for transparent background
             renderer.setPixelRatio(window.devicePixelRatio);
             renderer.setSize(window.innerWidth, window.innerHeight);
             renderer.toneMapping = THREE.ACESFilmicToneMapping;
