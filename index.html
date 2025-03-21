@@ -48,7 +48,7 @@
             renderer.toneMapping = THREE.ACESFilmicToneMapping;
             document.body.appendChild(renderer.domElement);
 
-            // Load Model
+            // Load Model with correct path
             const ktx2Loader = new KTX2Loader()
                 .setTranscoderPath('https://cdn.jsdelivr.net/npm/three@latest/examples/jsm/libs/basis/')
                 .detectSupport(renderer);
@@ -56,7 +56,7 @@
             new GLTFLoader()
                 .setKTX2Loader(ktx2Loader)
                 .setMeshoptDecoder(MeshoptDecoder)
-                .load('https://raw.githubusercontent.com/mrdoob/three.js/dev/examples/models/gltf/FaceCap.glb', (gltf) => {
+                .load('https://raw.githubusercontent.com/mailbennylim/webgl-face/8fbb5f5606372b798935e1a5cc6ee4d6cd153331/facecap.glb', (gltf) => {
                     const mesh = gltf.scene.children[0];
                     scene.add(mesh);
 
