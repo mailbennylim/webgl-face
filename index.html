@@ -59,8 +59,8 @@
                     const mesh = gltf.scene.children[0];
                     scene.add(mesh);
 
-                    // Rotate the model 180 degrees horizontally (flip along the Y-axis)
-                    mesh.rotation.y = Math.PI;
+                    // Rotate the model 90 degrees anticlockwise along the Y-axis
+                    mesh.rotation.y = Math.PI / 2; // 90 degrees
 
                     // Animation
                     mixer = new THREE.AnimationMixer(mesh);
