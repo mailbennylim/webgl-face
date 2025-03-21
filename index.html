@@ -60,7 +60,8 @@
                     scene.add(mesh);
 
                     // Rotate the model 90 degrees anticlockwise along the Y-axis
-                    mesh.rotation.y = -Math.PI / 5; // 90 degrees
+                    mesh.rotation.y = -Math.PI / 5.5;
+                    mesh.rotation.x = -20 * Math.PI / 180
 
                     // Animation
                     mixer = new THREE.AnimationMixer(mesh);
